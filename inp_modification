@@ -1,0 +1,22 @@
+** OUTPUT REQUESTS
+*Restart, write, frequency=0
+**
+** FIELD OUTPUT: retained-node results (assembly level)
+*Output, field
+*Node Output
+U, RF
+**
+** FIELD OUTPUT: recovered hole stress (substructure interior)
+*Substructure Path, enter element=1
+*Output, field
+*Element Output, elset=ELS_HOLES, directions=YES
+E, S
+*Substructure Path, leave
+**
+** HISTORY OUTPUT
+*Output, history
+*Node Output, nset=RP_TOP_SET_J2
+RF1, RF2, RF3, U1, U2, U3
+*Node Output, nset=RP_BOT_SET_J2
+RF1, RF2, RF3
+*End Step
